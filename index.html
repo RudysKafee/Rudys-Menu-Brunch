@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Desayunos | Rudy's Kafee</title>
-    <link rel="stylesheet" href="style.css?v=34">
+    <link rel="stylesheet" href="style.css?v=37">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -35,7 +35,7 @@
 
     <main class="main-content">
         <div class="content-container">
-            
+
             <div id="view-inicio" class="view-section active">
                 
                 <h2 class="brillo-brunch">Brunch Menu</h2>
@@ -44,25 +44,22 @@
                 
                 <div class="category-grid">
                     
+                    <!-- 1. BEBIDAS -->
                     <div class="category-card" onclick="navigateTo('view-bebidas-grid')">
                         <div class="category-image"><img src="frias/FrappeClasico.jpeg" alt="Bebidas"></div>
                         <h3>Bebidas</h3>
                         <p>Frías, Calientes y Tizanas</p>
                     </div>
 
-                    <div class="category-card" onclick="navigateTo('view-brunch-extras')">
+                    <!-- 2. BRUNCH (AHORA INCLUYE ENTREES) -->
+                    <div class="category-card" onclick="navigateTo('view-brunch')">
                         <div class="category-image"><img src="brunch/HuevosRancheros.jpeg" alt="Brunch"></div>
                         <h3>Brunch</h3>
-                        <p>Huevos, chilaquiles y toast</p>
+                        <p>Entrees, Huevos, Chilaquiles y Toast</p>
                     </div>
 
-                    <div class="category-card" onclick="navigateTo('view-entrees')">
-                        <div class="category-image"><img src="entrees/Rollitos.jpeg" alt="Entrees"></div>
-                        <h3>Entrees</h3>
-                        <p>Nuestras deliciosas entradas</p>
-                    </div>
-
-                    <div class="category-card" onclick="navigateTo('view-dulce')">
+                    <!-- 3. DULCE & BAKERY -->
+                    <div class="category-card" onclick="navigateTo('view-dulce')" style="grid-column: 1 / -1;">
                         <div class="category-image"><img src="postres/Brownie.jpeg" alt="Dulce"></div>
                         <h3>Dulce & Bakery</h3>
                         <p>French Toast, Bakery y Postres</p>
@@ -70,7 +67,8 @@
 
                 </div>
 
-                <div class="category-grid" style="grid-template-columns: 1fr; margin-top: 15px;">
+                <!-- 4. EXTRAS (GRID INDEPENDIENTE) -->
+                <div class="category-grid" style="grid-template-columns: 1fr; margin-top: 0px;">
                     <div class="category-card" onclick="navigateTo('view-extras')" style="display: flex; flex-direction: column; justify-content: center; padding: 20px;">
                         <h3>Extras</h3>
                         <p>Complementos para tu orden</p>
@@ -78,7 +76,6 @@
                 </div>
 
             </div>
-
             <div id="view-bebidas-grid" class="view-section">
                 <h2 class="section-title" style="text-align: center;">¿QUÉ TE APETECE BEBER?</h2>
                 <hr class="divider" style="margin: 10px auto 30px auto; width: 80px;">
@@ -194,14 +191,15 @@
                     <div class="menu-item"><div class="item-image-wrapper"><img src="frias/SaratogaChica.jpg" alt="Saratoga"></div><div class="item-text-wrapper"><h3 class="item-name">Agua Saratoga 355 ml</h3><span class="item-price">58.00</span></div></div>                   
                  </div>
             </div>
-
-            <div id="view-entrees" class="view-section">
+            <div id="view-brunch" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
                     <span>Son especialidad de la casa</span>
                 </div>
-                <h2 class="section-title">ENTREES</h2>
+                <h2 class="section-title">BRUNCH</h2>
                 <hr class="divider">
+
+                <h3 class="sub-section-title">Entrees</h3>
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="item-image-wrapper"><img src="entrees/BowlFrutas.jpeg" alt="Bowl de Frutas"></div>
@@ -228,8 +226,65 @@
                         <div class="item-text-wrapper"><h3 class="item-name">Mini Molletes</h3><p class="item-desc">Frijoles refritos, queso Gouda gratinado.<br>Chorizo.<br>Tocino.<br>Pico de gallo.<br>2 c/u</p><span class="item-price">185.00</span></div>
                     </div>
                 </div>
-            </div>
 
+                <h3 class="sub-section-title">Huevos</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper">
+                            <div class="mini-carrusel">
+                                <img src="huevos/EstrelladoTocino.jpeg" alt="Eggs Le Gout" class="slide-0">
+                                <img src="huevos/PapaRalladaTocino.jpeg" alt="Eggs Le Gout" class="slide-1">
+                                <img src="huevos/EstrelladoTocino.jpeg" alt="Eggs Le Gout" class="slide-2">
+                            </div>
+                        </div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Huevos al Gusto</h3><p class="item-desc">Huevo revuelto, estrellado <br> Acompañado de papa tater tots, aguacate y tocino.</p><span class="item-price">190.00</span></div>
+                    </div>
+                     <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/HuevosRancheros.jpeg" alt="Huevos Rancheros"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Huevos Rancheros</h3><p class="item-desc">Tortilla frita, huevo estrellado, salsa ranchera, queso feta, crema ácida, cilantro fresco.</p><span class="item-price">190.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/HuevosEnmolados.jpeg" alt="Huevos Enmolados"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Huevos Enmolados</h3><p class="item-desc">Tortilla frita, huevo estrellado bañados en mole, frijoles, cilantro fresco.</p><span class="item-price">190.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/HuevosShak.jpeg" alt="Huevos Rudys"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Huevos Shakshuka Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;"></h3><p class="item-desc">Salsa de tomate, cebolla, morrones, huevo estrellado, hogaza de mantequilla compuesta.</p><span class="item-price">215.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/PanHuevo.jpeg" alt="Croque Madame"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croque Madame</h3><p class="item-desc">Pan brioche, jamón de pierna, queso gouda, mostaza Dijon, salsa blanca, huevo estrellado.</p><span class="item-price">220.00</span></div>
+                    </div>
+                </div>
+
+                <h3 class="sub-section-title">Chilaquiles</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPollo.jpeg" alt="Chilaquiles Verdes"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Verdes</h3><p class="item-desc">Totopos crujientes, salsa verde cremosa, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPolloRojos.jpeg" alt="Chilaquiles Rojos"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Chipotle</h3><p class="item-desc">Totopos crujientes, salsa roja de chipotle, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesMole.jpeg" alt="Chilaquiles Enmolados"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Enmolados</h3><p class="item-desc">Totopos crujientes bañados en mole, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha. </p><span class="item-price">185.00</span></div>
+                    </div>
+                </div>
+
+                <h3 class="sub-section-title">Toast</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="toast/ToastHuevo.jpeg" alt="Avocat Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Avocado Toast Sunrise</h3><p class="item-desc">Hogaza natural, aguacate, tocino, huevo estrellado, salsa macha, mostaza dijon.</p><span class="item-price">175.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="toast/SaumonToast.jpg" alt="Saumon Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Salmón Toast Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px;"></h3><p class="item-desc">Hogaza, salmón ahumado, aguacate, pepino, cebolla morada, tzatziki.</p><span class="item-price">220.00</span></div>
+                    </div>
+                </div>
+            </div>
             <div id="view-dulce" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
@@ -302,74 +357,6 @@
                     </div>
                 </div>
             </div> 
-
-            <div id="view-brunch-extras" class="view-section">
-                <div class="especialidad-pill">
-                    <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
-                    <span>Son especialidad de la casa</span>
-                </div>
-                <h2 class="section-title">BRUNCH</h2>
-                <hr class="divider">
-
-                <h3 class="sub-section-title">Huevos</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image-wrapper">
-                            <div class="mini-carrusel">
-                                <img src="huevos/EstrelladoTocino.jpeg" alt="Eggs Le Gout" class="slide-0">
-                                <img src="huevos/PapaRalladaTocino.jpeg" alt="Eggs Le Gout" class="slide-1">
-                                <img src="huevos/EstrelladoTocino.jpeg" alt="Eggs Le Gout" class="slide-2">
-                            </div>
-                        </div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Huevos al Gusto</h3><p class="item-desc">Huevo revuelto, estrellado <br> Acompañado de papa tater tots, aguacate y tocino.</p><span class="item-price">190.00</span></div>
-                    </div>
-                     <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/HuevosRancheros.jpeg" alt="Huevos Rancheros"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Huevos Rancheros</h3><p class="item-desc">Tortilla frita, huevo estrellado, salsa ranchera, queso feta, crema ácida, cilantro fresco.</p><span class="item-price">190.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/HuevosEnmolados.jpeg" alt="Huevos Enmolados"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Huevos Enmolados</h3><p class="item-desc">Tortilla frita, huevo estrellado bañados en mole, frijoles, cilantro fresco.</p><span class="item-price">190.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/HuevosShak.jpeg" alt="Huevos Rudys"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Huevos Shakshuka Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;"></h3><p class="item-desc">Salsa de tomate, cebolla, morrones, huevo estrellado, hogaza de mantequilla compuesta.</p><span class="item-price">215.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/PanHuevo.jpeg" alt="Croque Madame"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Croque Madame</h3><p class="item-desc">Pan brioche, jamón de pierna, queso gouda, mostaza Dijon, salsa blanca, huevo estrellado.</p><span class="item-price">220.00</span></div>
-                    </div>
-                </div>
-
-                <h3 class="sub-section-title">Chilaquiles</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPollo.jpeg" alt="Chilaquiles Verdes"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Verdes</h3><p class="item-desc">Totopos crujientes, salsa verde cremosa, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPolloRojos.jpeg" alt="Chilaquiles Rojos"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Chipotle</h3><p class="item-desc">Totopos crujientes, salsa roja de chipotle, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesMole.jpeg" alt="Chilaquiles Enmolados"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Enmolados</h3><p class="item-desc">Totopos crujientes bañados en mole, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha. </p><span class="item-price">185.00</span></div>
-                    </div>
-                </div>
-
-                <h3 class="sub-section-title">Toast</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="toast/ToastHuevo.jpeg" alt="Avocat Toast"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name">Avocado Toast Sunrise</h3><p class="item-desc">Hogaza natural, aguacate, tocino, huevo estrellado, salsa macha, mostaza dijon.</p><span class="item-price">175.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image-wrapper"><img src="toast/SaumonToast.jpg" alt="Saumon Toast"></div>
-                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Salmón Toast Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px;"></h3><p class="item-desc">Hogaza, salmón ahumado, aguacate, pepino, cebolla morada, tzatziki.</p><span class="item-price">220.00</span></div>
-                    </div>
-                </div>
-            </div>
-
             <div id="view-extras" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
@@ -384,6 +371,10 @@
                     <div class="extra-item"><span class="extra-name">Aguacate</span><span class="extra-price">25.00</span></div>
                     <div class="extra-item"><span class="extra-name">Tocino</span><span class="extra-price">35.00</span></div>
                     <div class="extra-item"><span class="extra-name">Pollo</span><span class="extra-price">50.00</span></div>
+                    <div class="extra-item"><span class="extra-name">Salmon 100g </span><span class="extra-price">190.00</span></div>
+                    <div class="extra-item"><span class="extra-name">Salsa macha</span><span class="extra-price">35.00</span></div>
+                    <div class="extra-item"><span class="extra-name">Aderezo</span><span class="extra-price">35.00</span></div>
+                    <div class="extra-item"><span class="extra-name">Jamon</span><span class="extra-price">35.00</span></div>
                     
                     <div class="category-spacing"></div>
 
