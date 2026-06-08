@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Desayunos | Rudy's Kafee</title>
-    <link rel="stylesheet" href="style.css?v=37">
+    <link rel="stylesheet" href="style.css?v=44">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,21 +44,18 @@
                 
                 <div class="category-grid">
                     
-                    <!-- 1. BEBIDAS -->
                     <div class="category-card" onclick="navigateTo('view-bebidas-grid')">
                         <div class="category-image"><img src="frias/FrappeClasico.jpeg" alt="Bebidas"></div>
                         <h3>Bebidas</h3>
                         <p>Frías, Calientes y Tizanas</p>
                     </div>
 
-                    <!-- 2. BRUNCH (AHORA INCLUYE ENTREES) -->
                     <div class="category-card" onclick="navigateTo('view-brunch')">
                         <div class="category-image"><img src="brunch/HuevosRancheros.jpeg" alt="Brunch"></div>
                         <h3>Brunch</h3>
                         <p>Entrees, Huevos, Chilaquiles y Toast</p>
                     </div>
 
-                    <!-- 3. DULCE & BAKERY -->
                     <div class="category-card" onclick="navigateTo('view-dulce')" style="grid-column: 1 / -1;">
                         <div class="category-image"><img src="postres/Brownie.jpeg" alt="Dulce"></div>
                         <h3>Dulce & Bakery</h3>
@@ -67,7 +64,6 @@
 
                 </div>
 
-                <!-- 4. EXTRAS (GRID INDEPENDIENTE) -->
                 <div class="category-grid" style="grid-template-columns: 1fr; margin-top: 0px;">
                     <div class="category-card" onclick="navigateTo('view-extras')" style="display: flex; flex-direction: column; justify-content: center; padding: 20px;">
                         <h3>Extras</h3>
@@ -76,6 +72,7 @@
                 </div>
 
             </div>
+            
             <div id="view-bebidas-grid" class="view-section">
                 <h2 class="section-title" style="text-align: center;">¿QUÉ TE APETECE BEBER?</h2>
                 <hr class="divider" style="margin: 10px auto 30px auto; width: 80px;">
@@ -191,6 +188,7 @@
                     <div class="menu-item"><div class="item-image-wrapper"><img src="frias/SaratogaChica.jpg" alt="Saratoga"></div><div class="item-text-wrapper"><h3 class="item-name">Agua Saratoga 355 ml</h3><span class="item-price">58.00</span></div></div>                   
                  </div>
             </div>
+
             <div id="view-brunch" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
@@ -285,6 +283,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="view-dulce" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
@@ -357,6 +356,7 @@
                     </div>
                 </div>
             </div> 
+
             <div id="view-extras" class="view-section">
                 <div class="especialidad-pill">
                     <img src="LogoSinTexto.png" alt="Especialidad Rudy's">
@@ -373,12 +373,12 @@
                     <div class="extra-item"><span class="extra-name">Pollo</span><span class="extra-price">50.00</span></div>
                     <div class="extra-item"><span class="extra-name">Salmon 100g </span><span class="extra-price">190.00</span></div>
                     <div class="extra-item"><span class="extra-name">Salsa macha</span><span class="extra-price">35.00</span></div>
-                    <div class="extra-item"><span class="extra-name">Aderezo</span><span class="extra-price">35.00</span></div>
+                    <div class="extra-item"><span class="extra-name">Aderezo (Aioli, Cesar clarico, Romero)</span><span class="extra-price">35.00</span></div>
                     <div class="extra-item"><span class="extra-name">Jamon</span><span class="extra-price">35.00</span></div>
                     
                     <div class="category-spacing"></div>
 
-                    <h3 class="sub-section-title">Para tus Bebidas / Postres</h3>
+                    <h3 class="sub-section-title">Para tus Bebidas / Postres</h3> 
                     <div class="extra-item"><span class="extra-name">Leche Extra</span><span class="extra-price">12.00</span></div>
                     <div class="extra-item"><span class="extra-name">Leche de Almendra</span><span class="extra-price">18.00</span></div>
                     <div class="extra-item"><span class="extra-name">Leche de Soya</span><span class="extra-price">18.00</span></div>
